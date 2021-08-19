@@ -1,0 +1,87 @@
+("Vault Analyzer End-Game Edition | Highlights Trash | Keeps Top 1% Armor |
+Credit to TMMania for analysis and creating the template
+Update Version: July 5th, 2021"
+or
+(
+(
+	(
+	is:weapon (is:sunset or is:blue)
+	)
+or
+  (
+	(is:armor -is:exotic -is:classitem)
+
+	-(source:raid -is:dupelower -source:dcv)
+
+	-(maxbasestatvalue:any)
+	-(basestat:any:>=23)
+	-(basestat:total:>=65)
+
+	-(((basestat:mobility&resilience:>=22) or
+	(basestat:mobility&recovery:>=22) or
+	(basestat:mobility&discipline:>=22) or
+	(basestat:mobility&intellect:>=22) or
+	(basestat:mobility&strength:>=22) or
+	(basestat:resilience&recovery:>=22) or
+	(basestat:resilience&discipline:>=22) or
+	(basestat:resilience&intellect:>=22) or
+	(basestat:resilience&strength:>=22) or
+	(basestat:recovery&discipline:>=22) or
+	(basestat:recovery&intellect:>=22) or
+	(basestat:recovery&strength:>=22) or
+	(basestat:discipline&intellect:>=22) or
+	(basestat:discipline&strength:>=22) or
+	(basestat:intellect&strength:>=22)))
+
+	-(((basestat:mobility&resilience&recovery:>=17.66) or
+	(basestat:mobility&resilience&discipline:>=17.66) or
+	(basestat:mobility&resilience&intellect:>=17.66) or
+	(basestat:mobility&resilience&strength:>=17.66) or
+	(basestat:mobility&recovery&discipline:>=17.66) or
+	(basestat:mobility&recovery&intellect:>=17.66) or
+	(basestat:mobility&recovery&strength:>=17.66) or
+	(basestat:mobility&discipline&intellect:>=17.66) or
+	(basestat:mobility&discipline&strength:>=17.66) or
+	(basestat:mobility&intellect&strength:>=17.66) or
+	(basestat:resilience&recovery&discipline:>=17.66) or
+	(basestat:resilience&recovery&intellect:>=17.66) or
+	(basestat:resilience&recovery&strength:>=17.66) or
+	(basestat:resilience&discipline&intellect:>=17.66) or
+	(basestat:resilience&discipline&strength:>=17.66) or
+	(basestat:resilience&intellect&strength:>=17.66) or
+	(basestat:recovery&discipline&intellect:>=17.66) or
+	(basestat:recovery&discipline&strength:>=17.66) or
+	(basestat:recovery&intellect&strength:>=17.66) or
+	(basestat:discipline&intellect&strength:>=17.66)))
+
+	-(((basestat:mobility&resilience&recovery&intellect:>=14.75) or
+	(basestat:mobility&resilience&recovery&discipline:>=14.75) or
+	(basestat:mobility&resilience&recovery&strength:>=14.75) or
+	(basestat:mobility&resilience&intellect&discipline:>=14.75) or
+	(basestat:mobility&resilience&intellect&strength:>=14.75) or
+	(basestat:mobility&resilience&discipline&strength:>=14.75) or
+	(basestat:mobility&recovery&intellect&discipline:>=14.75) or
+	(basestat:mobility&recovery&intellect&strength:>=14.75) or
+	(basestat:mobility&recovery&discipline&strength:>=14.75) or
+	(basestat:mobility&intellect&discipline&strength:>=14.75) or
+	(basestat:resilience&recovery&intellect&discipline:>=14.75) or
+	(basestat:resilience&recovery&intellect&strength:>=14.75) or
+	(basestat:resilience&recovery&discipline&strength:>=14.75) or
+	(basestat:resilience&intellect&discipline&strength:>=14.75) or
+	(basestat:recovery&intellect&discipline&strength:>=14.75)))
+
+	-(basestat:mobility&resilience&recovery&discipline&intellect&strength:>=9 basestat:sixthhighest:>5 basestat:highest:<16)
+  )
+
+or
+	(is:classitem energycapacity:<=5 -is:modded -is:locked -(source:raid -is:dupelower -source:dcv))
+or
+	(is:armor is:sunset)
+or
+	(is:armor is:blue -(name:"war mantis" is:gauntlets))	
+or
+	((is:armor or is:weapon) and (is:common or is:uncommon))
+)
+-(is:tagged -tag:junk) -is:maxpower -is:inloadout -is:masterwork -(is:armor -is:armor2.0) -(is:armor source:events)
+)  or (tag:junk -is:maxpower)
+)
